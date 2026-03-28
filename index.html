@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khang Update</title>
+  <meta
+    name="description"
+    content="Website cá nhân về trading, quản lý vốn và công cụ tính toán chiến lược."
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="#home" class="logo">KHANG UPDATE <span>TRADING</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Mở menu">
+        ☰
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#tools">Tools</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">TRADING • RISK MANAGEMENT • CALCULATORS</p>
+          <h1>Giao dịch có hệ thống,<br />quản lý vốn rõ ràng</h1>
+          <p class="hero-desc">
+            Một trang cá nhân tập trung vào tư duy giao dịch, quản lý vốn,
+            dịch vụ hỗ trợ và các công cụ tính toán giúp người dùng ra quyết định có cấu trúc hơn.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#tools" class="btn btn-primary">Dùng công cụ</a>
+            <a href="#services" class="btn btn-outline">Xem dịch vụ</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <strong>01</strong>
+              <span>Lot Calculator</span>
+            </div>
+            <div class="stat-card">
+              <strong>02</strong>
+              <span>Risk Summary</span>
+            </div>
+            <div class="stat-card">
+              <strong>03</strong>
+              <span>Personal Brand</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="chart-card">
+            <div class="chart-top">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <div class="chart-body">
+              <div class="chart-line chart-line-1"></div>
+              <div class="chart-line chart-line-2"></div>
+              <div class="chart-bars">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">ABOUT</p>
+          <h2>Trang này dành cho ai?</h2>
+          <p>
+            Dành cho người muốn giao dịch có cấu trúc hơn, hiểu rõ rủi ro hơn,
+            và cần một nơi vừa có thông tin cá nhân, vừa có công cụ tính toán để sử dụng ngay.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="info-card">
+            <h3>Tư duy</h3>
+            <p>Ưu tiên hệ thống, quản lý vốn và tính kỷ luật trước khi nói đến lợi nhuận.</p>
+          </div>
+          <div class="info-card">
+            <h3>Giá trị</h3>
+            <p>Công cụ ở đây là để hỗ trợ tính toán và ra quyết định, không phải để hô hào.</p>
+          </div>
+          <div class="info-card">
+            <h3>Định hướng</h3>
+            <p>Xây dựng một trang cá nhân gọn, rõ, thực dụng và có thể mở rộng thành hệ sinh thái sau này.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools" class="section section-dark">
+  <div class="container">
+    <div class="section-heading">
+      <p class="section-tag">TOOLS</p>
+      <h2>Mô phỏng chiến lược DCA vàng</h2>
+      <p>
+        Công cụ này mô phỏng chuỗi DCA theo 7 nhóm lệnh. Người dùng nhập lot gốc,
+        TP tổng, giá gồng tối đa và thông số từng nhóm để xem tổng số lệnh, tổng lot,
+        âm trạng thái lớn nhất và mức hồi giá cần thiết để thoát chuỗi.
+      </p>
+    </div>
+
+    <div class="dca-layout">
+      <div class="tool-card dca-input-card">
+        <div class="tool-icon">DCA</div>
+        <h3>Thông số mô phỏng</h3>
+        <p>Giá vào lệnh đầu được mặc định là <strong>5000</strong>.</p>
+
+        <div class="dca-top-inputs">
+          <div class="form-group">
+            <label for="baseLot">Lot gốc</label>
+            <input type="number" id="baseLot" step="0.01" value="0.01" />
+          </div>
+
+          <div class="form-group">
+            <label for="tpTotalPip">TP tổng (pip)</label>
+            <input type="number" id="tpTotalPip" value="10" />
+          </div>
+
+          <div class="form-group">
+            <label for="maxDrawPrice">Giá gồng tối đa</label>
+            <input type="number" id="maxDrawPrice" value="80" />
+          </div>
+        </div>
+
+        <div class="group-table-wrap">
+          <table class="group-config-table">
+            <thead>
+              <tr>
+                <th>Nhóm</th>
+                <th>Số lệnh</th>
+                <th>Step (pip)</th>
+                <th>HS đầu nhóm</th>
+                <th>HS trong nhóm</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nhóm 1</td>
+                <td><input type="number" id="g1Orders" value="7" /></td>
+                <td><input type="number" id="g1Step" value="10" /></td>
+                <td><input type="number" id="g1StartFactor" step="0.01" value="1" /></td>
+                <td><input type="number" id="g1InnerFactor" step="0.01" value="1" /></td>
+              </tr>
+              <tr>
+                <td>Nhóm 2</td>
+                <td><input type="number" id="g2Orders" value="5" /></td>
+                <td><input type="number" id="g2Step" value="20" /></td>
+                <td><input type="number" id="g2StartFactor" step="0.01" value="1.27" /></td>
+                <td><input type="number" id="g2InnerFactor" step="0.01" value="1.27" /></td>
+              </tr>
+              <tr>
+                <td>Nhóm 3</td>
+                <td><input type="number" id="g3Orders" value="15" /></td>
+                <td><input type="number" id="g3Step" value="45" /></td>
+                <td><input type="number" id="g3StartFactor" step="0.01" value="1.28" /></td>
+                <td><input type="number" id="g3InnerFactor" step="0.01" value="1.27" /></td>
+              </tr>
+              <tr>
+                <td>Nhóm 4</td>
+                <td><input type="number" id="g4Orders" value="10" /></td>
+                <td><input type="number" id="g4Step" value="100" /></td>
+                <td><input type="number" id="g4StartFactor" step="0.01" value="1.3" /></td>
+                <td><input type="number" id="g4InnerFactor" step="0.01" value="1.3" /></td>
+              </tr>
+              <tr>
+                <td>Nhóm 5</td>
+                <td><input type="number" id="g5Orders" value="10" /></td>
+                <td><input type="number" id="g5Step" value="120" /></td>
+                <td><input type="number" id="g5StartFactor" step="0.01" value="1.2" /></td>
+                <td><input type="number" id="g5InnerFactor" step="0.01" value="1.2" /></td>
+              </tr>
+              <tr>
+                <td>Nhóm 6</td>
+                <td><input type="number" id="g6Orders" value="5" /></td>
+                <td><input type="number" id="g6Step" value="100" /></td>
+                <td><input type="number" id="g6StartFactor" step="0.01" value="1.3" /></td>
+                <td><input type="number" id="g6InnerFactor" step="0.01" value="1.3" /></td>
+              </tr>
+              <tr>
+                <td>Nhóm 7</td>
+                <td><input type="number" id="g7Orders" value="999" /></td>
+                <td><input type="number" id="g7Step" value="100" /></td>
+                <td><input type="number" id="g7StartFactor" step="0.01" value="1.5" /></td>
+                <td><input type="number" id="g7InnerFactor" step="0.01" value="1.5" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <button class="btn btn-primary full-btn" onclick="simulateDCA()">
+          Chạy mô phỏng
+        </button>
+      </div>
+
+      <div class="dca-output">
+        <div class="summary-grid">
+          <div class="summary-card">
+            <span>Tổng số lệnh</span>
+            <strong id="sumOrders">0</strong>
+          </div>
+          <div class="summary-card">
+            <span>Tổng lot</span>
+            <strong id="sumLots">0.00</strong>
+          </div>
+          <div class="summary-card">
+            <span>Âm trạng thái lớn nhất</span>
+            <strong id="maxFloatingLoss">0.00</strong>
+          </div>
+          <div class="summary-card">
+            <span>Hồi để thoát</span>
+            <strong id="recoveryPrice">0.00</strong>
+          </div>
+          <div class="summary-card">
+            <span>Lãi khi thoát</span>
+            <strong id="exitProfitOutput">0.00</strong>
+          </div>
+        </div>
+
+        <div class="result-box dca-note" id="dcaNote">
+          Nhấn “Chạy mô phỏng” để xem kết quả.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">SERVICES</p>
+          <h2>Dịch vụ</h2>
+          <p>
+            Phần này chị có thể thay bằng đúng dịch vụ thật của mình sau này.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Mentoring 1:1</h3>
+            <p>Hỗ trợ định hướng tư duy giao dịch, cách nhìn hệ thống và quản lý vốn.</p>
+          </div>
+          <div class="service-card">
+            <h3>Tài liệu trading</h3>
+            <p>Tổng hợp các tài liệu, hướng dẫn và framework phù hợp với người mới.</p>
+          </div>
+          <div class="service-card">
+            <h3>Cộng đồng</h3>
+            <p>Kết nối những người cùng quan tâm đến giao dịch có cấu trúc và kỷ luật.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">WHY THIS SITE</p>
+          <h2>Điểm khác biệt</h2>
+        </div>
+
+        <div class="bullet-grid">
+          <div class="bullet-card">Không hứa hẹn lợi nhuận.</div>
+          <div class="bullet-card">Ưu tiên quản lý vốn trước.</div>
+          <div class="bullet-card">Dùng công cụ để làm rõ con số.</div>
+          <div class="bullet-card">Giao diện rõ ràng, dễ thao tác.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact-box">
+        <div>
+          <p class="section-tag">CONTACT</p>
+          <h2>Sẵn sàng bắt đầu?</h2>
+          <p>
+            Chị có thể thay phần này bằng email, Telegram, Zalo, Facebook hoặc form liên hệ sau.
+          </p>
+        </div>
+
+        <div class="contact-info">
+          <p><strong>SĐT / Zalo</strong> 0983 81 6660</p>
+          <p><strong>Telegram:</strong> @khangupdate</p>
+          <p><strong>Youtube:</strong> youtube.com/@khangupdate</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <p>© 2026 Khang Update. All rights reserved.</p>
+      <p class="footer-note">
+        Công cụ trên website chỉ mang tính hỗ trợ tính toán, không phải khuyến nghị đầu tư.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
