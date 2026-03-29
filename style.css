@@ -708,3 +708,10 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+.hero-banner-img {
+  width: 100%;
+  border-radius: 26px;
+  box-shadow: var(--shadow);
+  object-fit: cover;
+}
