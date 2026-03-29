@@ -174,7 +174,6 @@ function simulateDCA() {
   note.innerHTML = `
     Đã mô phỏng <strong>${orders.length}</strong> lệnh với mức gồng tối đa
     <strong>${formatVN(maxDrawPrice)}</strong> giá.
-    Chuỗi DCA khớp tới lệnh xa nhất tại <strong>${formatVN(round2(farthestEntry))}</strong>.
     Âm trạng thái lớn nhất tại vùng giá gồng là
     <strong>${formatVN(round2(maxFloatingLoss))}</strong> USD.
     Nếu giá hồi thêm <strong>${formatVN(round2(recoveryNeed))}</strong> giá
