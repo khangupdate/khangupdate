@@ -61,23 +61,9 @@
           </div>
         </div>
 
-        <div class="hero-visual">
-          <div class="chart-card">
-            <div class="chart-top">
-              <span class="dot"></span>
-              <span class="dot"></span>
-              <span class="dot"></span>
-            </div>
-            <div class="chart-body">
-              <div class="chart-line chart-line-1"></div>
-              <div class="chart-line chart-line-2"></div>
-              <div class="chart-bars">
-                <span></span><span></span><span></span><span></span><span></span>
-                <span></span><span></span><span></span><span></span><span></span>
-              </div>
-            </div>
-          </div>
-        </div>
+       <div class="hero-visual">
+         <img src="ảnh khang.png" alt="ảnh khang" class="hero-banner-img" />
+       </div>
       </div>
     </section>
 
@@ -140,7 +126,7 @@
 
           <div class="form-group">
             <label for="maxDrawPrice">Giá gồng tối đa</label>
-            <input type="number" id="maxDrawPrice" value="80" />
+            <input type="number" id="maxDrawPrice" value="10" />
           </div>
         </div>
 
@@ -151,59 +137,59 @@
                 <th>Nhóm</th>
                 <th>Số lệnh</th>
                 <th>Step (pip)</th>
-                <th>HS đầu nhóm</th>
-                <th>HS trong nhóm</th>
+                <th>Hệ số đầu nhóm</th>
+                <th>Hệ số trong nhóm</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Nhóm 1</td>
-                <td><input type="number" id="g1Orders" value="7" /></td>
-                <td><input type="number" id="g1Step" value="10" /></td>
+                <td><input type="number" id="g1Orders" value="1" /></td>
+                <td><input type="number" id="g1Step" value="100" /></td>
                 <td><input type="number" id="g1StartFactor" step="0.01" value="1" /></td>
                 <td><input type="number" id="g1InnerFactor" step="0.01" value="1" /></td>
               </tr>
               <tr>
                 <td>Nhóm 2</td>
-                <td><input type="number" id="g2Orders" value="5" /></td>
-                <td><input type="number" id="g2Step" value="20" /></td>
-                <td><input type="number" id="g2StartFactor" step="0.01" value="1.27" /></td>
-                <td><input type="number" id="g2InnerFactor" step="0.01" value="1.27" /></td>
+                <td><input type="number" id="g2Orders" value="10" /></td>
+                <td><input type="number" id="g2Step" value="25" /></td>
+                <td><input type="number" id="g2StartFactor" step="0.01" value="1" /></td>
+                <td><input type="number" id="g2InnerFactor" step="0.01" value="1" /></td>
               </tr>
               <tr>
                 <td>Nhóm 3</td>
                 <td><input type="number" id="g3Orders" value="15" /></td>
                 <td><input type="number" id="g3Step" value="45" /></td>
-                <td><input type="number" id="g3StartFactor" step="0.01" value="1.28" /></td>
-                <td><input type="number" id="g3InnerFactor" step="0.01" value="1.27" /></td>
+                <td><input type="number" id="g3StartFactor" step="0.01" value="1" /></td>
+                <td><input type="number" id="g3InnerFactor" step="0.01" value="1" /></td>
               </tr>
               <tr>
                 <td>Nhóm 4</td>
                 <td><input type="number" id="g4Orders" value="10" /></td>
                 <td><input type="number" id="g4Step" value="100" /></td>
-                <td><input type="number" id="g4StartFactor" step="0.01" value="1.3" /></td>
-                <td><input type="number" id="g4InnerFactor" step="0.01" value="1.3" /></td>
+                <td><input type="number" id="g4StartFactor" step="0.01" value="1" /></td>
+                <td><input type="number" id="g4InnerFactor" step="0.01" value="1" /></td>
               </tr>
               <tr>
                 <td>Nhóm 5</td>
                 <td><input type="number" id="g5Orders" value="10" /></td>
                 <td><input type="number" id="g5Step" value="120" /></td>
-                <td><input type="number" id="g5StartFactor" step="0.01" value="1.2" /></td>
-                <td><input type="number" id="g5InnerFactor" step="0.01" value="1.2" /></td>
+                <td><input type="number" id="g5StartFactor" step="0.01" value="1" /></td>
+                <td><input type="number" id="g5InnerFactor" step="0.01" value="1" /></td>
               </tr>
               <tr>
                 <td>Nhóm 6</td>
                 <td><input type="number" id="g6Orders" value="5" /></td>
                 <td><input type="number" id="g6Step" value="100" /></td>
-                <td><input type="number" id="g6StartFactor" step="0.01" value="1.3" /></td>
-                <td><input type="number" id="g6InnerFactor" step="0.01" value="1.3" /></td>
+                <td><input type="number" id="g6StartFactor" step="0.01" value="1" /></td>
+                <td><input type="number" id="g6InnerFactor" step="0.01" value="1" /></td>
               </tr>
               <tr>
                 <td>Nhóm 7</td>
                 <td><input type="number" id="g7Orders" value="999" /></td>
                 <td><input type="number" id="g7Step" value="100" /></td>
-                <td><input type="number" id="g7StartFactor" step="0.01" value="1.5" /></td>
-                <td><input type="number" id="g7InnerFactor" step="0.01" value="1.5" /></td>
+                <td><input type="number" id="g7StartFactor" step="0.01" value="1" /></td>
+                <td><input type="number" id="g7InnerFactor" step="0.01" value="1" /></td>
               </tr>
             </tbody>
           </table>
@@ -250,23 +236,23 @@
       <div class="container">
         <div class="section-heading">
           <p class="section-tag">SERVICES</p>
-          <h2>Dịch vụ</h2>
+          <h2>Điều tôi có thể chia sẻ và giúp đỡ</h2>
           <p>
-            Phần này chị có thể thay bằng đúng dịch vụ thật của mình sau này.
+            Bằng những trải nghiệm, kinh nghiệm và kiến thức chính tôi góp nhặt được trong quá trình giao dịch trên thị trường, tôi sẵn sàng chia sẻ lại với bạn những tâm đắc của  tôi.
           </p>
         </div>
 
         <div class="services-grid">
           <div class="service-card">
-            <h3>Mentoring 1:1</h3>
+            <h3>Chỉ báo + Bot trading</h3>
             <p>Hỗ trợ định hướng tư duy giao dịch, cách nhìn hệ thống và quản lý vốn.</p>
           </div>
           <div class="service-card">
-            <h3>Tài liệu trading</h3>
+            <h3>Hệ thống giao dịch theo xu hướng - Trend Mastery Mindset</h3>
             <p>Tổng hợp các tài liệu, hướng dẫn và framework phù hợp với người mới.</p>
           </div>
           <div class="service-card">
-            <h3>Cộng đồng</h3>
+            <h3>Cộng đồng cùng tiến</h3>
             <p>Kết nối những người cùng quan tâm đến giao dịch có cấu trúc và kỷ luật.</p>
           </div>
         </div>
