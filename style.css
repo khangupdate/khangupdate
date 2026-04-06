@@ -703,10 +703,129 @@ a {
 }
 
 @media (max-width: 760px) {
-  .dca-top-inputs,
-  .summary-grid {
-    grid-template-columns: 1fr;
+  .dca-top-inputs {
+    grid-template-columns: repeat(2, 1fr);
   }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .summary-card {
+    padding: 14px 12px;
+  }
+
+  .summary-card span {
+    font-size: 0.8rem;
+  }
+
+  .summary-card strong {
+    font-size: 1rem;
+  }
+
+  .dca-note {
+    font-size: 0.88rem;
+  }
+
+  /* Ẩn bảng gốc, hiện card thay thế */
+  .group-config-table {
+    display: none;
+  }
+
+  .group-table-wrap::after {
+    display: none;
+  }
+
+  .group-cards {
+    display: grid;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 760px) {
+  .dca-top-inputs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .summary-card {
+    padding: 14px 12px;
+  }
+
+  .summary-card span {
+    font-size: 0.8rem;
+  }
+
+  .summary-card strong {
+    font-size: 1rem;
+  }
+
+  .dca-note {
+    font-size: 0.88rem;
+  }
+
+  /* Ẩn bảng gốc, hiện card thay thế */
+  .group-config-table {
+    display: none;
+  }
+
+  .group-table-wrap::after {
+    display: none;
+  }
+
+  .group-cards {
+    display: grid;
+    gap: 12px;
+  }
+}
+
+@media (min-width: 761px) {
+  .group-cards {
+    display: none;
+  }
+}
+
+.group-card-item {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.gc-title {
+  color: var(--gold-soft);
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.gc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.gc-row label {
+  color: var(--muted);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.gc-row input {
+  width: 90px;
+  min-height: 38px;
+  border-radius: 8px;
+  border: 1px solid rgba(212, 175, 55, 0.12);
+  background: #0f0f0f;
+  color: var(--white);
+  text-align: center;
+  padding: 0 8px;
+  font-size: 0.88rem;
 }
 
 .hero-banner-img {
