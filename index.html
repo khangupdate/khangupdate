@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khang Update</title>
+  <meta
+    name="description"
+    content="Website cá nhân về trading, quản lý vốn và công cụ tính toán chiến lược."
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="#home" class="logo">KHANG UPDATE <span>TRADING</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Mở menu">
+        ☰
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#tools">Tools</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">TRADING • RISK MANAGEMENT • CALCULATORS</p>
+          <h1>Giao dịch có hệ thống,<br />quản lý vốn rõ ràng</h1>
+          <p class="hero-desc">
+            Một trang cá nhân tập trung vào tư duy giao dịch, quản lý vốn,
+            dịch vụ hỗ trợ và các công cụ tính toán giúp người dùng ra quyết định có cấu trúc hơn.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#tools" class="btn btn-primary">Dùng công cụ</a>
+            <a href="#services" class="btn btn-outline">Xem dịch vụ</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <strong>01</strong>
+              <span>Lot Calculator</span>
+            </div>
+            <div class="stat-card">
+              <strong>02</strong>
+              <span>Risk Summary</span>
+            </div>
+            <div class="stat-card">
+              <strong>03</strong>
+              <span>Personal Brand</span>
+            </div>
+          </div>
+        </div>
+
+       <div class="hero-visual">
+         <img src="anh-khang.png" alt="ảnh khang" class="hero-banner-img" />
+       </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">ABOUT</p>
+          <h2>Trang này dành cho ai?</h2>
+          <p>
+            Dành cho người muốn giao dịch có cấu trúc hơn, hiểu rõ rủi ro hơn,
+            và cần một nơi vừa có thông tin cá nhân, vừa có công cụ tính toán để sử dụng ngay.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="info-card">
+            <h3>Tư duy</h3>
+            <p>Ưu tiên hệ thống, quản lý vốn và tính kỷ luật trước khi nói đến lợi nhuận.</p>
+          </div>
+          <div class="info-card">
+            <h3>Giá trị</h3>
+            <p>Công cụ ở đây là để hỗ trợ tính toán và ra quyết định, không phải để hô hào.</p>
+          </div>
+          <div class="info-card">
+            <h3>Định hướng</h3>
+            <p>Xây dựng một trang cá nhân gọn, rõ, thực dụng và có thể mở rộng thành hệ sinh thái sau này.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools" class="section section-dark">
+  <div class="container">
+    <div class="section-heading">
+      <p class="section-tag">TOOLS</p>
+      <h2>Mô phỏng chiến lược DCA vàng</h2>
+      <p>
+        Công cụ này mô phỏng chuỗi DCA theo 7 nhóm lệnh. Người dùng nhập lot gốc,
+        chọn giới hạn theo giá gồng hoặc MaxSL, chọn logic TP tổng hoặc TP theo lệnh cuối,
+        rồi xem danh sách từng lệnh và trạng thái toàn chuỗi tại mỗi bước.
+      </p>
+    </div>
+
+    <div class="dca-layout">
+      <div class="tool-card dca-input-card">
+        <div class="tool-icon">DCA</div>
+        <h3>Thông số mô phỏng</h3>
+
+        <div class="dca-top-inputs">
+          <div class="form-group">
+            <label for="baseLot">Lot gốc</label>
+            <input type="number" id="baseLot" step="0.01" value="0.01" />
+          </div>
+
+          <fieldset class="choice-panel">
+            <legend>Giới hạn mô phỏng</legend>
+            <div class="choice-tabs" role="radiogroup" aria-label="Chọn giới hạn mô phỏng">
+              <label>
+                <input type="radio" name="limitMode" value="price" checked />
+                <span>Giá gồng</span>
+              </label>
+              <label>
+                <input type="radio" name="limitMode" value="maxsl" />
+                <span>MaxSL</span>
+              </label>
+            </div>
+            <div class="form-group" data-limit-field="price">
+              <label for="maxDrawPrice">Giá gồng tối đa</label>
+              <input type="number" id="maxDrawPrice" value="10" />
+            </div>
+            <div class="form-group is-hidden" data-limit-field="maxsl">
+              <label for="maxSL">MaxSL cho phép (USD)</label>
+              <input type="number" id="maxSL" value="1000" />
+            </div>
+          </fieldset>
+
+          <fieldset class="choice-panel">
+            <legend>Logic TP</legend>
+            <div class="choice-tabs" role="radiogroup" aria-label="Chọn logic TP">
+              <label>
+                <input type="radio" name="tpMode" value="total" checked />
+                <span>TP tổng</span>
+              </label>
+              <label>
+                <input type="radio" name="tpMode" value="last" />
+                <span>TP theo lệnh cuối</span>
+              </label>
+            </div>
+            <div class="form-group" data-tp-field="total">
+              <label for="tpTotalPip">TP tổng (pip)</label>
+              <input type="number" id="tpTotalPip" value="10" />
+            </div>
+            <div class="form-group is-hidden" data-tp-field="last">
+              <label for="tpLastPip">TP theo lệnh cuối (pip)</label>
+              <input type="number" id="tpLastPip" value="20" />
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="group-table-wrap">
+          <table class="group-config-table">
+            <colgroup>
+              <col class="config-col-group" />
+              <col class="config-col-orders" />
+              <col class="config-col-step" />
+              <col class="config-col-factor" />
+              <col class="config-col-factor" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Nhóm</th>
+                <th>Số lệnh</th>
+                <th>Step (pip)</th>
+                <th>Hệ số đầu nhóm</th>
+                <th>Hệ số trong nhóm</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nhóm 1</td>
+                <td><input type="number" id="g1Orders" value="1" /></td>
+                <td><input type="number" id="g1Step" value="100" /></td>
+                <td><input type="number" id="g1StartFactor" step="0.01" value="1" /></td>
+                <td><input type="number" id="g1InnerFactor" step="0.01" value="1" /></td>
+              </tr>
+              <tr>
+                <td>Nhóm 2</td>
+                <td><input type="number" id="g2Orders" value="10" /></td>
+                <td><input type="number" id="g2Step" value="25" /></td>
+                <td><input type="number" id="g2StartFactor" step="0.01" value="1" /></td>
+                <td><input type="number" id="g2InnerFactor" step="0.01" value="1" /></td>
+              </tr>
+              <tr>
+                <td>Nhóm 3</td>
+                <td><input type="number" id="g3Orders" value="15" /></td>
+                <td><input type="number" id="g3Step" value="45" /></td>
+                <td><input type="number" id="g3StartFactor" step="0.01" value="1" /></td>
+                <td><input type="number" id="g3InnerFactor" step="0.01" value="1" /></td>
+              </tr>
+              <tr>
+                <td>Nhóm 4</td>
+                <td><input type="number" id="g4Orders" value="10" /></td>
+                <td><input type="number" id="g4Step" value="100" /></td>
+                <td><input type="number" id="g4StartFactor" step="0.01" value="1" /></td>
+                <td><input type="number" id="g4InnerFactor" step="0.01" value="1" /></td>
+              </tr>
+              <tr>
+                <td>Nhóm 5</td>
+                <td><input type="number" id="g5Orders" value="10" /></td>
+                <td><input type="number" id="g5Step" value="120" /></td>
+                <td><input type="number" id="g5StartFactor" step="0.01" value="1" /></td>
+                <td><input type="number" id="g5InnerFactor" step="0.01" value="1" /></td>
+              </tr>
+              <tr>
+                <td>Nhóm 6</td>
+                <td><input type="number" id="g6Orders" value="5" /></td>
+                <td><input type="number" id="g6Step" value="100" /></td>
+                <td><input type="number" id="g6StartFactor" step="0.01" value="1" /></td>
+                <td><input type="number" id="g6InnerFactor" step="0.01" value="1" /></td>
+              </tr>
+              <tr>
+                <td>Nhóm 7</td>
+                <td><input type="number" id="g7Orders" value="999" /></td>
+                <td><input type="number" id="g7Step" value="100" /></td>
+                <td><input type="number" id="g7StartFactor" step="0.01" value="1" /></td>
+                <td><input type="number" id="g7InnerFactor" step="0.01" value="1" /></td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- Card layout cho mobile -->
+<div class="group-cards">
+  <div class="group-card-item">
+    <div class="gc-title">Nhóm 1</div>
+    <div class="gc-row"><label>Số lệnh</label><input type="number" id="g1Orders_m" value="1" oninput="document.getElementById('g1Orders').value=this.value" /></div>
+    <div class="gc-row"><label>Step (pip)</label><input type="number" id="g1Step_m" value="100" oninput="document.getElementById('g1Step').value=this.value" /></div>
+    <div class="gc-row"><label>Hệ số đầu nhóm</label><input type="number" id="g1SF_m" step="0.01" value="1" oninput="document.getElementById('g1StartFactor').value=this.value" /></div>
+    <div class="gc-row"><label>Hệ số trong nhóm</label><input type="number" id="g1IF_m" step="0.01" value="1" oninput="document.getElementById('g1InnerFactor').value=this.value" /></div>
+  </div>
+  <div class="group-card-item">
+    <div class="gc-title">Nhóm 2</div>
+    <div class="gc-row"><label>Số lệnh</label><input type="number" id="g2Orders_m" value="10" oninput="document.getElementById('g2Orders').value=this.value" /></div>
+    <div class="gc-row"><label>Step (pip)</label><input type="number" id="g2Step_m" value="25" oninput="document.getElementById('g2Step').value=this.value" /></div>
+    <div class="gc-row"><label>Hệ số đầu nhóm</label><input type="number" id="g2SF_m" step="0.01" value="1" oninput="document.getElementById('g2StartFactor').value=this.value" /></div>
+    <div class="gc-row"><label>Hệ số trong nhóm</label><input type="number" id="g2IF_m" step="0.01" value="1" oninput="document.getElementById('g2InnerFactor').value=this.value" /></div>
+  </div>
+  <div class="group-card-item">
+    <div class="gc-title">Nhóm 3</div>
+    <div class="gc-row"><label>Số lệnh</label><input type="number" id="g3Orders_m" value="15" oninput="document.getElementById('g3Orders').value=this.value" /></div>
+    <div class="gc-row"><label>Step (pip)</label><input type="number" id="g3Step_m" value="45" oninput="document.getElementById('g3Step').value=this.value" /></div>
+    <div class="gc-row"><label>Hệ số đầu nhóm</label><input type="number" id="g3SF_m" step="0.01" value="1" oninput="document.getElementById('g3StartFactor').value=this.value" /></div>
+    <div class="gc-row"><label>Hệ số trong nhóm</label><input type="number" id="g3IF_m" step="0.01" value="1" oninput="document.getElementById('g3InnerFactor').value=this.value" /></div>
+  </div>
+  <div class="group-card-item">
+    <div class="gc-title">Nhóm 4</div>
+    <div class="gc-row"><label>Số lệnh</label><input type="number" id="g4Orders_m" value="10" oninput="document.getElementById('g4Orders').value=this.value" /></div>
+    <div class="gc-row"><label>Step (pip)</label><input type="number" id="g4Step_m" value="100" oninput="document.getElementById('g4Step').value=this.value" /></div>
+    <div class="gc-row"><label>Hệ số đầu nhóm</label><input type="number" id="g4SF_m" step="0.01" value="1" oninput="document.getElementById('g4StartFactor').value=this.value" /></div>
+    <div class="gc-row"><label>Hệ số trong nhóm</label><input type="number" id="g4IF_m" step="0.01" value="1" oninput="document.getElementById('g4InnerFactor').value=this.value" /></div>
+  </div>
+  <div class="group-card-item">
+    <div class="gc-title">Nhóm 5</div>
+    <div class="gc-row"><label>Số lệnh</label><input type="number" id="g5Orders_m" value="10" oninput="document.getElementById('g5Orders').value=this.value" /></div>
+    <div class="gc-row"><label>Step (pip)</label><input type="number" id="g5Step_m" value="120" oninput="document.getElementById('g5Step').value=this.value" /></div>
+    <div class="gc-row"><label>Hệ số đầu nhóm</label><input type="number" id="g5SF_m" step="0.01" value="1" oninput="document.getElementById('g5StartFactor').value=this.value" /></div>
+    <div class="gc-row"><label>Hệ số trong nhóm</label><input type="number" id="g5IF_m" step="0.01" value="1" oninput="document.getElementById('g5InnerFactor').value=this.value" /></div>
+  </div>
+  <div class="group-card-item">
+    <div class="gc-title">Nhóm 6</div>
+    <div class="gc-row"><label>Số lệnh</label><input type="number" id="g6Orders_m" value="5" oninput="document.getElementById('g6Orders').value=this.value" /></div>
+    <div class="gc-row"><label>Step (pip)</label><input type="number" id="g6Step_m" value="100" oninput="document.getElementById('g6Step').value=this.value" /></div>
+    <div class="gc-row"><label>Hệ số đầu nhóm</label><input type="number" id="g6SF_m" step="0.01" value="1" oninput="document.getElementById('g6StartFactor').value=this.value" /></div>
+    <div class="gc-row"><label>Hệ số trong nhóm</label><input type="number" id="g6IF_m" step="0.01" value="1" oninput="document.getElementById('g6InnerFactor').value=this.value" /></div>
+  </div>
+  <div class="group-card-item">
+    <div class="gc-title">Nhóm 7</div>
+    <div class="gc-row"><label>Số lệnh</label><input type="number" id="g7Orders_m" value="999" oninput="document.getElementById('g7Orders').value=this.value" /></div>
+    <div class="gc-row"><label>Step (pip)</label><input type="number" id="g7Step_m" value="100" oninput="document.getElementById('g7Step').value=this.value" /></div>
+    <div class="gc-row"><label>Hệ số đầu nhóm</label><input type="number" id="g7SF_m" step="0.01" value="1" oninput="document.getElementById('g7StartFactor').value=this.value" /></div>
+    <div class="gc-row"><label>Hệ số trong nhóm</label><input type="number" id="g7IF_m" step="0.01" value="1" oninput="document.getElementById('g7InnerFactor').value=this.value" /></div>
+  </div>
+</div>
+        </div>
+
+        <button class="btn btn-primary full-btn" onclick="simulateDCA()">
+          Chạy mô phỏng
+        </button>
+      </div>
+
+      <div class="dca-output">
+        <div class="summary-grid">
+          <div class="summary-card">
+            <span>Tổng số lệnh</span>
+            <strong id="sumOrders">0</strong>
+          </div>
+          <div class="summary-card">
+            <span>Tổng lot</span>
+            <strong id="sumLots">0.00</strong>
+          </div>
+          <div class="summary-card">
+            <span>Trạng thái tổng</span>
+            <strong id="maxFloatingLoss">0.00</strong>
+          </div>
+          <div class="summary-card">
+            <span>Giá gồng cuối</span>
+            <strong id="finalDrawPrice">0.00</strong>
+          </div>
+          <div class="summary-card">
+            <span>Giá hồi để thoát</span>
+            <strong id="recoveryPrice">0.00</strong>
+          </div>
+          <div class="summary-card">
+            <span>Lợi nhuận dự kiến</span>
+            <strong id="exitProfitOutput">0.00</strong>
+          </div>
+        </div>
+
+        <div class="result-box dca-note" id="dcaNote">
+          Nhấn “Chạy mô phỏng” để xem kết quả.
+        </div>
+
+        <div class="detail-table-card">
+          <div class="detail-table-head">
+            <h3>Danh sách từng lệnh</h3>
+            <span id="resultModeLabel">Theo giá gồng · TP tổng</span>
+          </div>
+          <div class="table-scroll">
+            <table class="result-table">
+              <colgroup>
+                <col class="result-col-order" />
+                <col class="result-col-group" />
+                <col class="result-col-lot" />
+                <col class="result-col-factor" />
+                <col class="result-col-total" />
+                <col class="result-col-step" />
+                <col class="result-col-draw" />
+                <col class="result-col-recovery" />
+                <col class="result-col-profit" />
+                <col class="result-col-state" />
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>Số lệnh</th>
+                  <th>Nhóm</th>
+                  <th>Lot</th>
+                  <th>Hệ số</th>
+                  <th>Tổng lot</th>
+                  <th>STEP DCA</th>
+                  <th>Giá gồng</th>
+                  <th>Giá hồi để thoát</th>
+                  <th>Lợi nhuận</th>
+                  <th>Trạng thái tổng</th>
+                </tr>
+              </thead>
+              <tbody id="orderRows">
+                <tr>
+                  <td colspan="10">Chưa có dữ liệu mô phỏng.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">SERVICES</p>
+          <h2>Điều tôi có thể chia sẻ và giúp đỡ</h2>
+          <p>
+            Bằng những trải nghiệm, kinh nghiệm và kiến thức chính tôi góp nhặt được trong quá trình giao dịch trên thị trường, tôi sẵn sàng chia sẻ lại với bạn những tâm đắc của  tôi.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Chỉ báo + Bot trading</h3>
+            <p>Hỗ trợ định hướng tư duy giao dịch, cách nhìn hệ thống và quản lý vốn.</p>
+          </div>
+          <div class="service-card">
+            <h3>Hệ thống giao dịch theo xu hướng - Trend Mastery Mindset</h3>
+            <p>Tổng hợp các tài liệu, hướng dẫn và framework phù hợp với người mới.</p>
+          </div>
+          <div class="service-card">
+            <h3>Cộng đồng cùng tiến</h3>
+            <p>Kết nối những người cùng quan tâm đến giao dịch có cấu trúc và kỷ luật.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-tag">WHY THIS SITE</p>
+          <h2>Điểm khác biệt</h2>
+        </div>
+
+        <div class="bullet-grid">
+          <div class="bullet-card">Không hứa hẹn lợi nhuận.</div>
+          <div class="bullet-card">Ưu tiên quản lý vốn trước.</div>
+          <div class="bullet-card">Dùng công cụ để làm rõ con số.</div>
+          <div class="bullet-card">Giao diện rõ ràng, dễ thao tác.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact-box">
+        <div>
+          <p class="section-tag">CONTACT</p>
+          <h2>Sẵn sàng bắt đầu?</h2>
+          <p>
+            Chị có thể thay phần này bằng email, Telegram, Zalo, Facebook hoặc form liên hệ sau.
+          </p>
+        </div>
+
+        <div class="contact-info">
+  <a href="https://zalo.me/0983816660" class="contact-btn" target="_blank" rel="noopener">
+    <span class="contact-btn-icon">💬</span>
+    <span class="contact-btn-text">
+      <strong>Zalo</strong>
+      <small>cá nhân</small>
+    </span>
+  </a>
+  <a href="https://t.me/khangupdate" class="contact-btn" target="_blank" rel="noopener">
+    <span class="contact-btn-icon">✈️</span>
+    <span class="contact-btn-text">
+      <strong>Telegram</strong>
+      <small>@khangupdate</small>
+    </span>
+  </a>
+  <a href="https://youtube.com/@khangupdate" class="contact-btn" target="_blank" rel="noopener">
+    <span class="contact-btn-icon">▶️</span>
+    <span class="contact-btn-text">
+      <strong>Youtube</strong>
+      <small>@khangupdate</small>
+    </span>
+  </a>
+</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <p>© 2026 Khang Update. All rights reserved.</p>
+      <p class="footer-note">
+        Công cụ trên website chỉ mang tính hỗ trợ tính toán, không phải khuyến nghị đầu tư.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
