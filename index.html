@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KHANGUPDATE</title>
+  <meta
+    name="description"
+    content="KHANGUPDATE — Nhật ký thực chiến của một trader: chiến lược DCA, quản lý vốn, giao dịch XAUUSD, trading bot và lịch sử lệnh thực tế."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-shell">
+      <a class="brand" href="#home" aria-label="KHANGUPDATE">
+        <span class="brand-mark">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.5 19.2 4.8 17.5l4.4-4.4-2.9-2.9 1.9-1.9 10.5 10.5-1.9 1.9-2.9-2.9-4.4 4.4-1.7-1.7 4.4-4.4-1.4-1.4-4.4 4.4Z" opacity=".35" />
+            <path d="M20 3.2h-6.1L7.2 12l1.7 1.7 3.6-3.6 1.4 1.4-3.6 3.6 1.7 1.7 8.8-6.7V3.2Z" />
+          </svg>
+          <span></span>
+        </span>
+        <span class="brand-text">KHANG<span>UPDATE</span></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Mở menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Điều hướng chính">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#tools">Tools</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="nav-ghost" href="#contact">Liên hệ</a>
+        <a class="btn btn-primary btn-sm" href="#tools">Dùng công cụ</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-bg" aria-hidden="true">
+        <img src="https://picsum.photos/seed/khang-update-market/1800/1000" alt="" />
+        <span class="hero-glow"></span>
+      </div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="live-pill">
+            <span></span>
+            <p>DCA · Bot trade · Cộng đồng thực chiến</p>
+          </div>
+          <h1>
+            Rèn luyện từ gốc,<br />
+            <span class="shimmer-text">hiểu đúng bản chất.</span><br />
+            Tôi là một trader<br />
+            đang học tập mỗi ngày.
+          </h1>
+          <p class="hero-desc">
+            Không phải chuyên gia. Không bán khóa học. Không phát signal.<br />
+            Chỉ là một trader đang học — ghi lại quá trình thật, chia sẻ để
+            cùng nhau hiểu thị trường đúng hơn mỗi ngày.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#tools">
+              Xem mô phỏng DCA
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13m-5-5 5 5-5 5" /></svg>
+            </a>
+            <a class="btn btn-secondary" href="#about">Tìm hiểu thêm</a>
+          </div>
+
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="marquee-band" aria-label="Trạng thái hệ thống">
+      <div class="marquee-track">
+        <span>TÔI TRADE DEMO</span>
+        <span>TRADING RẤT RỦI RO</span>
+        <span>TÔI KHÔNG PHẢI CHUYÊN GIA</span>
+        <span>TÔI KHÔNG BÁN KHÓA HỌC</span>
+        <span>HÃY CÂN NHẮC THẬT KĨ TRƯỚC KHI QUYẾT ĐỊNH</span>
+        <span>BẠN TỰ CHỊU TRÁCH NHIỆM VỚI QUYẾT ĐỊNH CỦA MÌNH</span>
+        <span>TÔI TRADE DEMO</span>
+        <span>TRADING RẤT RỦI RO</span>
+        <span>TÔI KHÔNG PHẢI CHUYÊN GIA</span>
+        <span>TÔI KHÔNG BÁN KHÓA HỌC</span>
+        <span>HÃY CÂN NHẮC THẬT KĨ TRƯỚC KHI QUYẾT ĐỊNH</span>
+        <span>BẠN TỰ CHỊU TRÁCH NHIỆM VỚI QUYẾT ĐỊNH CỦA MÌNH</span>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading reveal" style="display:flex; gap:4rem; align-items:center; flex-wrap:wrap; justify-content:space-between; max-width:100%;">
+          <img src="assets/images/anh-khang.png" alt="Khang" style="width:220px; height:220px; border-radius:50%; object-fit:cover; flex-shrink:0; border:3px solid var(--accent, #f5a623);" />
+          <div style="flex:1; min-width:260px;">
+            <p class="eyebrow">Về KHANGUPDATE</p>
+            <h2>Chia sẻ bài học<br /><span class="shimmer-text">từ 5 năm thực chiến.</span></h2>
+            <p>
+              Khang Update chia sẻ lại những bài học kinh nghiệm đã tích lũy được
+              trong 5 năm tham gia thị trường tài chính — từ những lần thua lỗ,
+              gồng lệnh, sai chiến lược đến khi dần hiểu ra cách tiếp cận đúng hơn.
+            </p>
+          </div>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 7v6c0 4.8 3.4 7.4 8 8 4.6-.6 8-3.2 8-8V7l-8-4Z" /></svg>
+            </div>
+            <p>Quản lý vốn</p>
+            <h3>Hiểu rủi ro trước khi nghĩ đến lợi nhuận</h3>
+            <span>Cách tính toán lot size theo vốn, thiết lập MaxSL, kiểm soát drawdown và xây dựng nguyên tắc bảo vệ tài khoản qua từng giai đoạn thị trường.</span>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17 10 11l4 4 6-8M4 21h16" /></svg>
+            </div>
+            <p>Backtest chiến lược</p>
+            <h3>Kiểm chứng trước khi dùng tiền thật</h3>
+            <span>Mô phỏng và kiểm tra chiến lược trên dữ liệu lịch sử để hiểu rõ hiệu suất, tỷ lệ thắng/thua và hành vi của hệ thống trước khi đưa vào thực chiến.</span>
+          </article>
+          <article class="feature-card reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v14H4zM8 9h8M8 13h5" /></svg>
+            </div>
+            <p>Bot Trading</p>
+            <h3>Ứng dụng bot như công cụ hỗ trợ</h3>
+            <span>Cách thiết lập và vận hành trading bot để hỗ trợ vào lệnh, theo dõi chuỗi DCA và duy trì kỷ luật giao dịch — không phải để thay thế tư duy của trader.</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tool" id="tools">
+      <div class="tool-bg" aria-hidden="true">
+        <img src="https://picsum.photos/seed/khang-tactics-map/1600/900" alt="" />
+      </div>
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">TOOLS</p>
+          <h2>Công cụ mô phỏng chiến lược DCA XAUUSD</h2>
+          <p>
+            Công cụ mô phỏng chuỗi lệnh DCA theo 7 nhóm. Nhập lot gốc, thiết lập giới hạn
+            theo giá gồng hoặc MaxSL, chọn logic chốt lời theo TP tổng hoặc TP lệnh cuối —
+            xem toàn bộ danh sách lệnh và trạng thái floating loss của chuỗi tại từng bước.
+          </p>
+        </div>
+
+        <div class="dca-layout reveal">
+          <aside class="tool-panel glass-panel">
+            <div class="panel-title">
+              <span>DCA</span>
+              <div>
+                <p>Thông số mô phỏng</p>
+                <small>Chuỗi DCA theo 7 nhóm lệnh</small>
+              </div>
+            </div>
+
+            <div class="control-grid">
+              <label class="field">
+                <span>Lot gốc</span>
+                <input type="number" id="baseLot" step="0.01" value="0.01" />
+              </label>
+
+              <fieldset class="choice-panel">
+                <legend>Giới hạn mô phỏng</legend>
+                <div class="segmented-control" role="radiogroup" aria-label="Chọn giới hạn mô phỏng">
+                  <label>
+                    <input type="radio" name="limitMode" value="price" checked />
+                    <span>Giá gồng</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="limitMode" value="maxsl" />
+                    <span>MaxSL</span>
+                  </label>
+                </div>
+                <label class="field" data-limit-field="price">
+                  <span>Giá gồng tối đa</span>
+                  <input type="number" id="maxDrawPrice" value="10" />
+                </label>
+                <label class="field is-hidden" data-limit-field="maxsl">
+                  <span>MaxSL cho phép (USD)</span>
+                  <input type="number" id="maxSL" value="1000" />
+                </label>
+              </fieldset>
+
+              <fieldset class="choice-panel">
+                <legend>Logic TP</legend>
+                <div class="segmented-control" role="radiogroup" aria-label="Chọn logic TP">
+                  <label>
+                    <input type="radio" name="tpMode" value="total" checked />
+                    <span>TP tổng</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="tpMode" value="last" />
+                    <span>TP lệnh cuối</span>
+                  </label>
+                </div>
+                <label class="field" data-tp-field="total">
+                  <span>TP tổng (pip)</span>
+                  <input type="number" id="tpTotalPip" value="10" />
+                </label>
+                <label class="field is-hidden" data-tp-field="last">
+                  <span>TP theo lệnh cuối (pip)</span>
+                  <input type="number" id="tpLastPip" value="20" />
+                </label>
+              </fieldset>
+            </div>
+
+            <div class="group-table-wrap">
+              <table class="group-config-table">
+                <colgroup>
+                  <col class="config-col-group" />
+                  <col class="config-col-orders" />
+                  <col class="config-col-step" />
+                  <col class="config-col-factor" />
+                  <col class="config-col-factor" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>Nhóm</th>
+                    <th>Số lệnh</th>
+                    <th>Step (pip)</th>
+                    <th>Hệ số đầu nhóm</th>
+                    <th>Hệ số trong nhóm</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Nhóm 1</td><td><input type="number" id="g1Orders" value="1" /></td><td><input type="number" id="g1Step" value="100" /></td><td><input type="number" id="g1StartFactor" step="0.01" value="1" /></td><td><input type="number" id="g1InnerFactor" step="0.01" value="1" /></td></tr>
+                  <tr><td>Nhóm 2</td><td><input type="number" id="g2Orders" value="10" /></td><td><input type="number" id="g2Step" value="25" /></td><td><input type="number" id="g2StartFactor" step="0.01" value="1" /></td><td><input type="number" id="g2InnerFactor" step="0.01" value="1" /></td></tr>
+                  <tr><td>Nhóm 3</td><td><input type="number" id="g3Orders" value="15" /></td><td><input type="number" id="g3Step" value="45" /></td><td><input type="number" id="g3StartFactor" step="0.01" value="1" /></td><td><input type="number" id="g3InnerFactor" step="0.01" value="1" /></td></tr>
+                  <tr><td>Nhóm 4</td><td><input type="number" id="g4Orders" value="10" /></td><td><input type="number" id="g4Step" value="100" /></td><td><input type="number" id="g4StartFactor" step="0.01" value="1" /></td><td><input type="number" id="g4InnerFactor" step="0.01" value="1" /></td></tr>
+                  <tr><td>Nhóm 5</td><td><input type="number" id="g5Orders" value="10" /></td><td><input type="number" id="g5Step" value="120" /></td><td><input type="number" id="g5StartFactor" step="0.01" value="1" /></td><td><input type="number" id="g5InnerFactor" step="0.01" value="1" /></td></tr>
+                  <tr><td>Nhóm 6</td><td><input type="number" id="g6Orders" value="5" /></td><td><input type="number" id="g6Step" value="100" /></td><td><input type="number" id="g6StartFactor" step="0.01" value="1" /></td><td><input type="number" id="g6InnerFactor" step="0.01" value="1" /></td></tr>
+                  <tr><td>Nhóm 7</td><td><input type="number" id="g7Orders" value="999" /></td><td><input type="number" id="g7Step" value="100" /></td><td><input type="number" id="g7StartFactor" step="0.01" value="1" /></td><td><input type="number" id="g7InnerFactor" step="0.01" value="1" /></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </aside>
+
+          <section class="result-panel">
+            <div class="summary-grid">
+              <article class="summary-card glass-panel">
+                <span>Tổng số lệnh</span>
+                <strong id="sumOrders">0</strong>
+              </article>
+              <article class="summary-card glass-panel">
+                <span>Tổng lot</span>
+                <strong id="sumLots">0,00</strong>
+              </article>
+              <article class="summary-card glass-panel danger">
+                <span>Trạng thái tổng</span>
+                <strong id="maxFloatingLoss">0,00</strong>
+              </article>
+              <article class="summary-card glass-panel">
+                <span>Giá gồng cuối</span>
+                <strong id="finalDrawPrice">0,00</strong>
+              </article>
+              <article class="summary-card glass-panel">
+                <span>Giá hồi để thoát</span>
+                <strong id="recoveryPrice">0,00</strong>
+              </article>
+              <article class="summary-card glass-panel success">
+                <span>Lợi nhuận dự kiến</span>
+                <strong id="exitProfitOutput">0,00</strong>
+              </article>
+            </div>
+
+            <div class="note-card glass-panel" id="dcaNote">
+              Nhấn “Chạy mô phỏng” để xem kết quả.
+            </div>
+
+            <div class="orders-table-shell glass-panel">
+              <div class="table-heading">
+                <div>
+                  <p>Danh sách từng lệnh</p>
+                  <span id="resultModeLabel">Theo giá gồng · TP tổng</span>
+                </div>
+              </div>
+              <div class="orders-table-wrap">
+                <table class="orders-table">
+                  <colgroup>
+                    <col class="result-col-order" />
+                    <col class="result-col-group" />
+                    <col class="result-col-lot" />
+                    <col class="result-col-factor" />
+                    <col class="result-col-total" />
+                    <col class="result-col-step" />
+                    <col class="result-col-draw" />
+                    <col class="result-col-recovery" />
+                    <col class="result-col-profit" />
+                    <col class="result-col-state" />
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>Số lệnh</th>
+                      <th>Nhóm</th>
+                      <th>Lot</th>
+                      <th>Hệ số</th>
+                      <th>Tổng lot</th>
+                      <th>STEP DCA</th>
+                      <th>Giá gồng</th>
+                      <th>Giá hồi để thoát</th>
+                      <th>Lợi nhuận</th>
+                      <th>Trạng thái tổng</th>
+                    </tr>
+                  </thead>
+                  <tbody id="orderRows">
+                    <tr>
+                      <td colspan="10">Chưa có dữ liệu mô phỏng.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Nội dung</p>
+          <h2>Những gì KHANGUPDATE chia sẻ</h2>
+          <p>Không dạy trading, không hứa hẹn lợi nhuận. Chỉ ghi lại những gì thực sự xảy ra trên thị trường.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card reveal">
+            <img src="assets/icons/dca-strategy.svg" alt="" />
+            <div>
+              <span>01</span>
+              <h3>Chiến lược DCA</h3>
+              <p>Cách thiết kế chuỗi lệnh theo lot size, step, mức gồng và điều kiện thoát lệnh — để hiểu rõ rủi ro trước khi triển khai trên tài khoản thật.</p>
+            </div>
+          </article>
+          <article class="service-card reveal">
+            <img src="assets/icons/capital-management.svg" alt="" />
+            <div>
+              <span>02</span>
+              <h3>Quản lý vốn</h3>
+              <p>Tập trung vào drawdown tối đa chấp nhận được, MaxSL, tỷ trọng lot theo vốn và nguyên tắc bảo vệ tài khoản — ưu tiên hơn lợi nhuận.</p>
+            </div>
+          </article>
+          <article class="service-card reveal">
+            <img src="assets/icons/trade-bot.svg" alt="" />
+            <div>
+              <span>03</span>
+              <h3>Trading Bot</h3>
+              <p>Ghi lại cách vận hành trading bot như công cụ hỗ trợ theo dõi thị trường, vào lệnh và duy trì kỷ luật giao dịch — không phải máy tạo lợi nhuận tự động.</p>
+            </div>
+          </article>
+          <article class="service-card reveal">
+            <img src="assets/icons/real-trading.svg" alt="" />
+            <div>
+              <span>04</span>
+              <h3>Nhật ký thực chiến</h3>
+              <p>Chia sẻ lịch sử lệnh thực tế: những lần nhận định sai, những pha phải gồng lệnh, điều chỉnh chiến lược và bài học cụ thể sau mỗi chu kỳ thị trường.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="disclaimer">
+      <div class="cta-bg" aria-hidden="true">
+        <img src="https://picsum.photos/seed/khang-update-records/1800/650" alt="" />
+      </div>
+      <div class="container cta-content reveal">
+        <p class="eyebrow">Miễn trừ trách nhiệm</p>
+        <h2>Tham khảo thôi.<br /><span class="shimmer-text">Không phải lời khuyên đầu tư.</span></h2>
+        <p>
+          Tất cả nội dung Khang chia sẻ đều là quan điểm cá nhân và được chia sẻ để mọi người tham khảo, giải trí — không phải lời khuyên hay khuyến nghị đầu tư.<br /><br />
+          Giao dịch và đầu tư trên thị trường tài chính luôn tiềm ẩn rủi ro cao và không phù hợp với tất cả mọi người. Khang không cung cấp dịch vụ tư vấn tài chính và không chịu trách nhiệm về bất kỳ quyết định đầu tư nào của bạn.
+        </p>
+        <div class="hero-actions center">
+          <a class="btn btn-primary" href="#tools">Xem công cụ DCA</a>
+          <a class="btn btn-secondary" href="#tools">Xem calculator</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Liên hệ</p>
+        <h2>Kết nối với <span class="shimmer-text">KHANGUPDATE</span></h2>
+
+      </div>
+      <div class="contact-cards reveal" style="display:grid; grid-template-columns:repeat(3,1fr); gap:16px; max-width:860px; margin:0 auto;">
+        <a href="https://zalo.me/0983816660" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:16px; padding:20px 24px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:16px; text-decoration:none; transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.background='rgba(255,255,255,0.04)'">
+          <img src="assets/images/zalo.png" alt="Zalo" style="width:52px; height:52px; border-radius:50%; object-fit:cover; flex-shrink:0;" />
+          <div>
+            <div style="font-weight:700; font-size:15px; color:#fff; margin-bottom:4px;">Zalo</div>
+            <div style="font-size:13px; color:rgba(255,255,255,0.5);">0983816660</div>
+          </div>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61582753990138" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:16px; padding:20px 24px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:16px; text-decoration:none; transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.background='rgba(255,255,255,0.04)'">
+          <img src="assets/images/facebook.png" alt="Facebook" style="width:52px; height:52px; border-radius:50%; object-fit:cover; flex-shrink:0;" />
+          <div>
+            <div style="font-weight:700; font-size:15px; color:#fff; margin-bottom:4px;">Facebook</div>
+            <div style="font-size:13px; color:rgba(255,255,255,0.5);">KhangUpdate</div>
+          </div>
+        </a>
+        <a href="https://youtube.com/@khangupdate" target="_blank" rel="noopener" style="display:flex; align-items:center; gap:16px; padding:20px 24px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:16px; text-decoration:none; transition:background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.background='rgba(255,255,255,0.04)'">
+          <img src="assets/images/youtube.jpg" alt="YouTube" style="width:52px; height:52px; border-radius:50%; object-fit:cover; flex-shrink:0;" />
+          <div>
+            <div style="font-weight:700; font-size:15px; color:#fff; margin-bottom:4px;">YouTube</div>
+            <div style="font-size:13px; color:rgba(255,255,255,0.5);">@khangupdate</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="#home" aria-label="KHANGUPDATE">
+          <span class="brand-mark">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.5 19.2 4.8 17.5l4.4-4.4-2.9-2.9 1.9-1.9 10.5 10.5-1.9 1.9-2.9-2.9-4.4 4.4-1.7-1.7 4.4-4.4-1.4-1.4-4.4 4.4Z" opacity=".35" />
+              <path d="M20 3.2h-6.1L7.2 12l1.7 1.7 3.6-3.6 1.4 1.4-3.6 3.6 1.7 1.7 8.8-6.7V3.2Z" />
+            </svg>
+          </span>
+          <span class="brand-text">KHANG<span>UPDATE</span></span>
+        </a>
+        <p>Nhật ký thực chiến về chiến lược DCA, quản lý vốn, giao dịch XAUUSD, trading bot và lịch sử lệnh thực tế.</p>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#tools">Tools</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

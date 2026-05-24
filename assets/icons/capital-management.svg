@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Capital management visual</title>
+  <desc id="desc">Dark risk dashboard with protective capital rings and allocation bars.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#11151b"/>
+      <stop offset=".55" stop-color="#07080a"/>
+      <stop offset="1" stop-color="#010203"/>
+    </linearGradient>
+    <radialGradient id="amber" cx=".35" cy=".4" r=".5">
+      <stop offset="0" stop-color="#f0b90b" stop-opacity=".27"/>
+      <stop offset=".48" stop-color="#f0b90b" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#f0b90b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <rect width="960" height="540" fill="url(#amber)"/>
+  <g opacity=".14" stroke="#ffffff">
+    <path d="M80 120h800M80 230h800M80 340h800M80 450h800"/>
+    <path d="M160 80v390M320 80v390M480 80v390M640 80v390M800 80v390"/>
+  </g>
+  <g transform="translate(116 86)">
+    <circle cx="210" cy="190" r="148" fill="#0d1014" stroke="#ffffff" stroke-opacity=".08" stroke-width="2"/>
+    <circle cx="210" cy="190" r="112" fill="none" stroke="#f0b90b" stroke-width="18" stroke-linecap="round" stroke-dasharray="520 184" transform="rotate(-92 210 190)"/>
+    <circle cx="210" cy="190" r="76" fill="none" stroke="#e5edf7" stroke-opacity=".16" stroke-width="16" stroke-linecap="round" stroke-dasharray="260 218" transform="rotate(36 210 190)"/>
+    <path d="M210 90 288 124v76c0 66-36 108-78 128-42-20-78-62-78-128v-76l78-34Z" fill="#f0b90b" fill-opacity=".13" stroke="#f0b90b" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M170 201 198 228l58-78" fill="none" stroke="#f0b90b" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g transform="translate(552 112)">
+    <rect x="0" y="0" width="272" height="316" rx="24" fill="#0d0f13" stroke="#ffffff" stroke-opacity=".08"/>
+    <rect x="34" y="48" width="204" height="18" rx="9" fill="#ffffff" opacity=".1"/>
+    <rect x="34" y="96" width="168" height="20" rx="10" fill="#f0b90b" opacity=".95"/>
+    <rect x="34" y="140" width="118" height="20" rx="10" fill="#f0b90b" opacity=".62"/>
+    <rect x="34" y="184" width="218" height="20" rx="10" fill="#f0b90b" opacity=".34"/>
+    <rect x="34" y="238" width="80" height="44" rx="12" fill="#151922" stroke="#f0b90b" stroke-opacity=".55"/>
+    <rect x="132" y="238" width="102" height="44" rx="12" fill="#151922" stroke="#ffffff" stroke-opacity=".08"/>
+  </g>
+</svg>

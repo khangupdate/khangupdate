@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Trade bot support visual</title>
+  <desc id="desc">Automated trade bot interface with circuit paths, chart signals, and amber status lights.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#16171d"/>
+      <stop offset=".5" stop-color="#07080b"/>
+      <stop offset="1" stop-color="#020303"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".72" cy=".28" r=".48">
+      <stop offset="0" stop-color="#f0b90b" stop-opacity=".3"/>
+      <stop offset=".5" stop-color="#f0b90b" stop-opacity=".07"/>
+      <stop offset="1" stop-color="#f0b90b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <rect width="960" height="540" fill="url(#glow)"/>
+  <g opacity=".18" stroke="#ffffff">
+    <path d="M112 102h740M112 210h740M112 318h740M112 426h740"/>
+    <path d="M210 70v390M370 70v390M530 70v390M690 70v390"/>
+  </g>
+  <g transform="translate(128 118)">
+    <rect x="0" y="0" width="318" height="270" rx="30" fill="#0d1015" stroke="#ffffff" stroke-opacity=".09"/>
+    <rect x="68" y="58" width="182" height="128" rx="32" fill="#141922" stroke="#f0b90b" stroke-opacity=".5" stroke-width="3"/>
+    <circle cx="126" cy="122" r="17" fill="#f0b90b"/>
+    <circle cx="192" cy="122" r="17" fill="#f0b90b"/>
+    <path d="M126 168c28 22 68 22 96 0" fill="none" stroke="#e5edf7" stroke-opacity=".72" stroke-width="8" stroke-linecap="round"/>
+    <path d="M159 58V28M159 28h52" fill="none" stroke="#f0b90b" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="226" cy="28" r="13" fill="#f0b90b"/>
+    <path d="M68 124H28M250 124h40" stroke="#f0b90b" stroke-width="8" stroke-linecap="round"/>
+    <rect x="44" y="218" width="230" height="20" rx="10" fill="#f0b90b" opacity=".28"/>
+  </g>
+  <g transform="translate(512 96)">
+    <rect x="0" y="0" width="318" height="318" rx="28" fill="#0b0d11" stroke="#ffffff" stroke-opacity=".08"/>
+    <path d="M38 224c42-86 76-32 116-82 38-48 74-34 126-80" fill="none" stroke="#e5edf7" stroke-opacity=".3" stroke-width="7" stroke-linecap="round"/>
+    <path d="M38 240h242" stroke="#ffffff" stroke-opacity=".12" stroke-width="2"/>
+    <path d="M38 194h242" stroke="#ffffff" stroke-opacity=".12" stroke-width="2"/>
+    <path d="M38 148h242" stroke="#ffffff" stroke-opacity=".12" stroke-width="2"/>
+    <path d="M38 102h242" stroke="#ffffff" stroke-opacity=".12" stroke-width="2"/>
+    <circle cx="102" cy="172" r="16" fill="#f0b90b"/>
+    <circle cx="186" cy="128" r="16" fill="#f0b90b"/>
+    <circle cx="248" cy="74" r="16" fill="#f0b90b"/>
+    <path d="M78 270h58M158 270h34M214 270h64" stroke="#f0b90b" stroke-opacity=".62" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <path d="M446 253h66" stroke="#f0b90b" stroke-width="8" stroke-linecap="round" stroke-dasharray="2 18"/>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Real trading visual</title>
+  <desc id="desc">Real trading journal with candlesticks, order history, and marked decision points.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#15161b"/>
+      <stop offset=".58" stop-color="#07080a"/>
+      <stop offset="1" stop-color="#010203"/>
+    </linearGradient>
+    <radialGradient id="glow" cx=".26" cy=".22" r=".52">
+      <stop offset="0" stop-color="#f0b90b" stop-opacity=".25"/>
+      <stop offset=".45" stop-color="#f0b90b" stop-opacity=".07"/>
+      <stop offset="1" stop-color="#f0b90b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="960" height="540" fill="url(#bg)"/>
+  <rect width="960" height="540" fill="url(#glow)"/>
+  <g opacity=".15" stroke="#ffffff">
+    <path d="M84 92h792M84 182h792M84 272h792M84 362h792M84 452h792"/>
+    <path d="M170 66v414M300 66v414M430 66v414M560 66v414M690 66v414M820 66v414"/>
+  </g>
+  <g transform="translate(110 92)">
+    <rect x="0" y="0" width="740" height="346" rx="30" fill="#0c0f14" stroke="#ffffff" stroke-opacity=".08"/>
+    <g stroke-linecap="round">
+      <g stroke="#f0b90b" stroke-width="8">
+        <path d="M92 96v88"/><path d="M178 70v112"/><path d="M264 136v88"/><path d="M350 92v142"/><path d="M436 156v78"/><path d="M522 110v138"/><path d="M608 82v100"/>
+      </g>
+      <g fill="#f0b90b">
+        <rect x="72" y="118" width="40" height="48" rx="8"/>
+        <rect x="158" y="98" width="40" height="54" rx="8" opacity=".72"/>
+        <rect x="244" y="162" width="40" height="34" rx="8" opacity=".54"/>
+        <rect x="330" y="122" width="40" height="80" rx="8" opacity=".86"/>
+        <rect x="416" y="176" width="40" height="32" rx="8" opacity=".48"/>
+        <rect x="502" y="142" width="40" height="62" rx="8" opacity=".78"/>
+        <rect x="588" y="112" width="40" height="46" rx="8" opacity=".9"/>
+      </g>
+    </g>
+    <path d="M56 276h628" stroke="#ffffff" stroke-opacity=".1" stroke-width="2"/>
+    <g>
+      <rect x="58" y="294" width="106" height="20" rx="10" fill="#f0b90b" opacity=".85"/>
+      <rect x="188" y="294" width="86" height="20" rx="10" fill="#ffffff" opacity=".12"/>
+      <rect x="300" y="294" width="136" height="20" rx="10" fill="#ffffff" opacity=".12"/>
+      <rect x="462" y="294" width="82" height="20" rx="10" fill="#f0b90b" opacity=".38"/>
+      <rect x="570" y="294" width="98" height="20" rx="10" fill="#ffffff" opacity=".12"/>
+    </g>
+  </g>
+  <g transform="translate(634 76)">
+    <circle cx="90" cy="90" r="54" fill="#f0b90b" fill-opacity=".14" stroke="#f0b90b" stroke-width="5"/>
+    <path d="M64 92l18 18 40-54" fill="none" stroke="#f0b90b" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
