@@ -1,0 +1,4 @@
+const bar=document.createElement('div');bar.style.cssText='position:fixed;top:0;left:0;height:2px;background:#c6a15b;z-index:99;width:0;transition:width .08s linear';document.body.appendChild(bar);
+const update=()=>{const d=document.documentElement;const max=d.scrollHeight-d.clientHeight;bar.style.width=(max?d.scrollTop/max*100:0)+'%'};addEventListener('scroll',update,{passive:true});update();
+const sections=[...document.querySelectorAll('main section[id]')];const links=[...document.querySelectorAll('nav a')];
+const io=new IntersectionObserver(entries=>{for(const e of entries){if(e.isIntersecting){links.forEach(a=>a.style.color='');const a=links.find(x=>x.getAttribute('href')==='#'+e.target.id);if(a)a.style.color='#eee6db'}}},{rootMargin:'-20% 0px -70% 0px'});sections.forEach(s=>io.observe(s));
